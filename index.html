@@ -342,8 +342,8 @@
 
 <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
                     <p class="text-lg font-semibold text-gray-800">Corporate Troubleshooting of Motherhood in the Digital Age: Exploring Virtual Clinics' Role in Shaping Contemporary Motherhood</p>
-                    <p class="text-sm text-gray-700">Paper presentation at the <span class="text-[var(--color-primary)] font-medium">Society for Social Studies of Science (4S) Conference, Honolulu, Hawaii.</span></p>
-                    <p class="text-xs text-gray-500">November 2023</p>
+                    <p class="text-sm text-gray-700">Paper presentation at the <span class="text-[var(--color-primary)] font-medium">Association of Internet Research Conference 2024, Sheffield, UK</span></p>
+                    <p class="text-xs text-gray-500">November 2024</p>
                 </div>
                 
 
@@ -497,13 +497,16 @@
                 
 
 <a href="#" onclick="showProjectDetail('transnational-film-video'); return false;" class="portfolio-card bg-gray-50 border-gray-200">
-                    <img src="https://placehold.co/600x400/3498DB/FFFFFF?text=Transnational+Video+Essays" 
-                         alt="Student video essay still" 
+                    
+                    <img src="https://static.wixstatic.com/media/5721b2_46da8c31f0914929b4ebb25d2ef5aa58~mv2.png" 
+                         alt="Student video essay storyboard example" 
                          class="w-full h-40 object-cover"
-                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/3498DB/FFFFFF?text=Image+Error';">
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/3498DB/FFFFFF?text=Transnational+Video+Essays+Error';">
                     <div class="p-4">
                         <h4 class="text-xl font-semibold text-gray-900 mb-1">Transnational Film & Video</h4>
-                        <p class="text-sm text-gray-600">Group video essays exploring global media flows, post-colonial narratives, and Deborah Shaw's categories of transnational cinema.</p>
+                        
+
+<p class="text-sm text-gray-600">Student-led projects that analyze global films through the lens of critical media theory. The projects focus on creating **video essays** and written scripts that categorize cinema based on transnational flows and post-colonial narratives.</p>
                         <p class="text-xs text-[var(--color-secondary-2)] mt-2 font-medium">Course: Transnational Film (Fall 2024)</p>
                     </div>
                 </a>
@@ -762,7 +765,7 @@
                     <h4 class="text-xl font-semibold mt-6 mb-2 text-gray-800">Speculative Design:</h4>
                     <p>This component tasked students with creating fictional artifacts and interfaces to critique issues like algorithmic bias and platform surveillance, forcing them to use practical design skills to imagine future outcomes.</p>
 
-                    <h4 class="text-xl font-semibold mt-6 mb-2 text-gray-800">"Dear AI" Letters:</h4>
+                    <h5 class="text-lg font-medium mt-4 mb-2 text-gray-700">"Dear AI" Letters:</h5>
                     <p>This challenge prompted students to write and record letters to a future AI system, expressing their hopes, fears, and ethical concerns regarding its role in society, creativity, and labor. The letters emphasize the human, emotional, and social dimensions of AI adoption.</p>
                     <p class="font-bold text-[var(--color-primary)] mt-4">The audio letter available above represents an exemplary student submission, offering a profound and reflective perspective on the future partnership between humans and AI.</p>
                     
@@ -807,7 +810,7 @@
 
                     <h5 class="text-lg font-medium mt-4 mb-2 text-gray-700">Student Rationale: Metaphorical Framing (Murder Mystery)</h5>
                     <blockquote class="border-l-4 border-[var(--color-primary)] pl-4 italic text-gray-600">
-                        "My project calls for directive participation because it asks the audience to complete simple tasks, clicking through the story, and putting together clues to further the plot. In high school, my best friend sexually assaulted someone. While I don’t mention SA in my story because I don’t personally have the capacity to discuss such a topic responsibly, the metaphor of a murder mystery suits my perspective of the situation quite well. When I went into this project, I wanted to tackle the social situation surrounding my experience."
+                        "My project calls for directive participation because it asks the audience to complete simple tasks, clicking through the story, and putting together clues to further the plot. In high school, my best friend sexually assaulted someone. While I don’t mention SA in my story because I don’t personally have the capacity to discuss such a topic responsibly, the metaphor of a murder mystery suits my perspective of the situation quite well. I went into this project wanting to tackle the social situation surrounding my experience."
                     </blockquote>
 
                     <h4 class="text-xl font-semibold mt-6 mb-2 text-gray-800">Key Themes Explored:</h4>
@@ -853,9 +856,10 @@
                     <p class="mt-4">Students are also required to produce a <strong>written essay</strong> that might be used as the script for the video essay, and a comprehensive <strong>storyboard</strong>.</p>
                 `,
                 detailImages: [
-                    'https://static.wixstatic.com/media/5721b2_46da8c31f0914929b4ebb25d2ef5aa58~mv2.png', // Storyboard Example
-                    'https://placehold.co/800x500/3498DB/FFFFFF?text=Example+Video+Essay+Still+1',
-                    'https://placehold.co/800x500/3498DB/FFFFFF?text=Example+Video+Essay+Still+2',
+                    'https://static.wixstatic.com/media/5721b2_46da8c31f0914929b4ebb25d2ef5aa58~mv2.png', // Storyboard Example (kept first)
+                    'https://static.wixstatic.com/media/5721b2_f63492488dfe499f8ee1935cd3df5744~mv2.jpg',
+                    'https://static.wixstatic.com/media/5721b2_f7fc9c2b60224abc97e8723a6ab1a129~mv2.jpg',
+                    'https://static.wixstatic.com/media/5721b2_b1417dcec9d34de48f23d31f111b4a3e~mv2.jpg',
                 ]
             }
         };
@@ -864,13 +868,14 @@
 
         /**
          * Switches the view to the main portfolio page and scrolls to the top.
+         * FIX: Replaced history.pushState with window.location.hash = '' to avoid SecurityError.
          */
         function showMainPage() {
             document.getElementById('main-content').classList.remove('hidden');
             document.getElementById('project-detail-view').classList.add('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
-            // Optionally update the URL hash
-            history.pushState(null, '', window.location.pathname + window.location.search);
+            // Fix applied here
+            window.location.hash = '';
         }
 
         /**
@@ -948,11 +953,12 @@
             document.getElementById('project-detail-view').classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            // Optionally update URL hash for back/forward support (simple hash change)
-            history.pushState(null, '', `#project/${projectId}`);
+            // FIX: Set the hash to reflect the project state to avoid SecurityError
+            window.location.hash = `project/${projectId}`;
         }
 
         // --- 3. Initial Load Handling (Optional: for deep linking/browser back button) ---
+        // This still uses the hash check, which is fine.
         window.addEventListener('popstate', (event) => {
             const hash = window.location.hash;
             if (hash.startsWith('#project/')) {
@@ -978,4 +984,3 @@
         }
     </script>
 </body>
-</html>
