@@ -67,55 +67,75 @@
             background-color: #f7f7f7;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
+
+        /* Portfolio Card Styling */
+        .portfolio-card {
+            display: block;
+            background-color: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Sticky Navigation Bar (SIMPLIFIED) -->
-    <header class="sticky top-0 z-50 bg-white shadow-sm header-section">
+    
+
+<header id="header" class="sticky top-0 z-50 bg-white shadow-sm header-section">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex justify-between items-center h-16">
-                <!-- LEFT SIDE: Red Circle, Bold Angelica, Light Title -->
-                <a href="#hero" class="flex items-center space-x-2 transition duration-300">
-                    <!-- Red Circle -->
+                
+
+<a href="#" onclick="showMainPage(); return false;" class="flex items-center space-x-2 transition duration-300">
                     <span class="w-3 h-3 rounded-full bg-[var(--color-primary)] flex-shrink-0"></span>
-                    <!-- Bold First Name -->
                     <span class="text-xl font-bold text-gray-800">Angelica</span>
-                    <!-- Light Black Title (hidden on small screens to prevent overflow) -->
                     <span class="hidden sm:inline text-base font-light text-gray-500">Lecturer and Researcher</span>
                 </a>
                 
-                <!-- RIGHT SIDE: SIMPLIFIED Section Links (Teaching, Education, Publications ONLY) -->
-                <div class="hidden lg:flex items-center space-x-4 text-sm font-medium">
+                
+
+<div class="hidden lg:flex items-center space-x-4 text-sm font-medium">
                     <a href="#professional" class="nav-link text-gray-600">Teaching</a>
                     <span class="text-gray-400">|</span>
                     <a href="#academic" class="nav-link text-gray-600">Education</a>
                     <span class="text-gray-400">|</span>
                     <a href="#research" class="nav-link text-gray-600">Publications</a>
+                    <span class="text-gray-400">|</span>
+                    <a href="#portfolio" class="nav-link text-gray-600">Portfolio</a>
                 </div>
-                <!-- Simple mobile menu placeholder -->
-                <button class="lg:hidden text-gray-600 hover:text-[var(--color-primary)]">
+                
+
+<button class="lg:hidden text-gray-600 hover:text-[var(--color-primary)]">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </nav>
         </div>
     </header>
 
-    <!-- Main Content Container -->
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    
 
-        <!-- 1. Hero / Bio Section -->
-        <section id="hero" class="content-section pt-16 pb-10 sm:pt-24 sm:pb-16 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
+<div id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        
+
+<section id="hero" class="content-section pt-16 pb-10 sm:pt-24 sm:pb-16 flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
             <div class="w-full md:w-2/3">
                 <h1 class="text-5xl font-extrabold text-gray-900 leading-tight mb-4">
                     Angelica Martinez Ochoa
                 </h1>
-                <!-- Specialty text color set to YELLOW -->
-                <p class="text-xl font-medium text-[var(--color-secondary-1)] mb-6">
+                
+
+<p class="text-xl font-medium text-[var(--color-secondary-1)] mb-6">
                     Lecturer & Critical Media Studies Researcher
                 </p>
                 
-                <!-- REVISED MULTI-PARAGRAPH BIO TEXT -->
                 <div class="text-lg text-gray-700 leading-relaxed space-y-4">
                     <p>Welcome!</p>
                     <p>
@@ -128,12 +148,10 @@
                         Ultimately, I am interested in how technological design, discourse, and international cooperation in a multipolar world can help us imagine more equitable technological futures, ones that sustain all of us, and especially the mothers and women whose labor continues to hold our societies together.
                     </p>
                 </div>
-                <!-- END REVISED MULTI-PARAGRAPH BIO TEXT -->
-
             </div>
-            <!-- Increased size to w-[18.5rem] h-[18.5rem] (~w-74 h-74 in spacing units) -->
-            <div class="w-[18.5rem] h-[18.5rem] flex-shrink-0">
-                <!-- PHOTO UPDATE: The direct image link is now inserted here. -->
+            
+
+<div class="w-[18.5rem] h-[18.5rem] flex-shrink-0">
                 <img src="https://static.wixstatic.com/media/5721b2_512c76ccd63747f1958d47a3c975ee27~mv2.jpg/v1/fill/w_608,h_608,fp_0.39_0.23,q_85,enc_avif,quality_auto/AngelicaMartinez-Photo.jpg" 
                      alt="Angelica Martinez Ochoa Profile Photo" 
                      class="w-full h-full object-cover rounded-full shadow-lg border-4 border-white ring-4 ring-rose-300"
@@ -141,58 +159,58 @@
             </div>
         </section>
 
-        <!-- 2. Professional Trajectory (Teaching) -->
-        <section id="professional" class="content-section">
-            <!-- Section border color set to LIGHT BLUE -->
+        
+
+<section id="professional" class="content-section">
             <h2 class="text-4xl font-light text-gray-800 mb-10 border-b-2 border-[var(--color-secondary-2)] inline-block pb-1 tracking-wider">
                 Teaching & Research Trajectory
             </h2>
 
             <div class="space-y-8">
-                <!-- Timeline Item 1: Lecturer -->
-                <div class="timeline-item">
+                
+
+<div class="timeline-item">
                     <h3 class="text-xl font-semibold text-gray-900">Lecturer, Transnational Film and Video</h3>
-                    <!-- Institution color set to LIGHT BLUE -->
                     <p class="text-[var(--color-secondary-2)] font-medium">The University of Texas at Dallas</p>
                     <p class="text-sm text-gray-500 mb-2">August 2024 – Present</p>
                 </div>
 
-                <!-- Timeline Item 2: Teaching Associate (DCC) -->
-                <div class="timeline-item">
+                
+
+<div class="timeline-item">
                     <h3 class="text-xl font-semibold text-gray-900">Teaching Associate, Art Appreciation and Design 1</h3>
-                    <!-- Institution color set to LIGHT BLUE -->
                     <p class="text-[var(--color-secondary-2)] font-medium">Dallas Community College</p>
                     <p class="text-sm text-gray-500 mb-2">August 2023 – Present</p>
                 </div>
 
-                <!-- Timeline Item 3: Teaching Associate (Technoculture) - NEW -->
-                <div class="timeline-item">
+                
+
+<div class="timeline-item">
                     <h3 class="text-xl font-semibold text-gray-900">Teaching Associate, Technoculture</h3>
-                    <!-- Institution color set to LIGHT BLUE -->
                     <p class="text-[var(--color-secondary-2)] font-medium">The University of Texas at Dallas</p>
                     <p class="text-sm text-gray-500 mb-2">Summer 2023 and Summer 2024</p>
                 </div>
 
-                <!-- Timeline Item 4: Teaching Associate (Digital Art) -->
-                <div class="timeline-item">
+                
+
+<div class="timeline-item">
                     <h3 class="text-xl font-semibold text-gray-900">Teaching Associate, Digital Art and Social Practice</h3>
-                    <!-- Institution color set to LIGHT BLUE -->
                     <p class="text-[var(--color-secondary-2)] font-medium">The University of Texas at Dallas</p>
                     <p class="text-sm text-gray-500 mb-2">August 2022 – May 2024</p>
                 </div>
 
-                <!-- Timeline Item 5: Teaching Associate (Writing for ATEC) - NEW -->
-                <div class="timeline-item">
+                
+
+<div class="timeline-item">
                     <h3 class="text-xl font-semibold text-gray-900">Teaching Associate, Writing for Arts, Technology and Emerging Communications</h3>
-                    <!-- Institution color set to LIGHT BLUE -->
                     <p class="text-[var(--color-secondary-2)] font-medium">The University of Texas at Dallas</p>
                     <p class="text-sm text-gray-500 mb-2">August 2021 – May 2022</p>
                 </div>
                 
-                <!-- Timeline Item 6: Research Assistant (UTD) -->
-                <div class="timeline-item">
+                
+
+<div class="timeline-item">
                     <h3 class="text-xl font-semibold text-gray-900">Research Assistant, Critical Media Studies Project</h3>
-                    <!-- Institution color set to LIGHT BLUE -->
                     <p class="text-[var(--color-secondary-2)] font-medium">The University of Texas at Dallas</p>
                     <p class="text-sm text-gray-500 mb-2">August 2019 – July 2020</p>
                     <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
@@ -202,132 +220,141 @@
             </div>
         </section>
 
-        <!-- 3. Academic Background (Education) -->
-        <section id="academic" class="content-section">
-            <!-- Section border color set to LIGHT BLUE -->
+        
+
+<section id="academic" class="content-section">
             <h2 class="text-4xl font-light text-gray-800 mb-10 border-b-2 border-[var(--color-secondary-2)] inline-block pb-1 tracking-wider">
                 Academic Background
             </h2>
 
             <div class="space-y-8">
-                <!-- Education Item 1: Ph.D. -->
-                <div class="timeline-item">
+                
+
+<div class="timeline-item">
                     <h3 class="text-xl font-semibold text-gray-900">Ph.D. in Arts, Technology and Emerging Communication</h3>
-                    <!-- Institution color set to LIGHT BLUE -->
                     <p class="text-[var(--color-secondary-2)] font-medium">The University of Texas at Dallas (ATEC)</p>
                     <p class="text-sm text-gray-500 mb-2">Graduated: June 2024</p>
                     <p class="text-gray-700">Dissertation: The Work of New Motherhood: Technocapitalism and Postpartum Labor (Committee Chair: Dr. Josef Nguyen).</p>
                 </div>
 
-                <!-- Education Item 2: M.S. -->
-                <div class="timeline-item">
+                
+
+<div class="timeline-item">
                     <h3 class="text-xl font-semibold text-gray-900">M.S. in International Business Development</h3>
-                    <!-- Institution color set to LIGHT BLUE -->
                     <p class="text-[var(--color-secondary-2)] font-medium">Peter the Great St. Petersburg Polytechnic University</p>
                     <p class="text-sm text-gray-500 mb-2">Graduated: June 2015</p>
                     <p class="text-gray-700">Thesis on Job Opportunities for International Graduates in the Russian and German Labor Markets.</p>
                 </div>
                 
-                <!-- Education Item 3: B.A. -->
-                <div class="timeline-item">
+                
+
+<div class="timeline-item">
                     <h3 class="text-xl font-semibold text-gray-900">B.A. in Communications Science</h3>
-                    <!-- Institution color set to LIGHT BLUE -->
                     <p class="text-[var(--color-secondary-2)] font-medium">Instituto Tecnologico y de Estudios Superiores de Monterrey</p>
                     <p class="text-sm text-gray-500 mb-2">Graduated: December 2012</p>
                 </div>
             </div>
         </section>
         
-        <!-- 4. Research Work / Publications (Section title updated) -->
-        <section id="research" class="content-section">
-            <!-- Section title updated here -->
+        
+
+<section id="research" class="content-section">
             <h2 class="text-4xl font-light text-gray-800 mb-10 border-b-2 border-[var(--color-secondary-2)] inline-block pb-1 tracking-wider">
                 Publications
             </h2>
             
             <div class="space-y-6">
-                <!-- Publication 1 (Book Review: October 2025) -->
-                <div class="p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition duration-300 border border-gray-100">
+                
+
+<div class="p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition duration-300 border border-gray-100">
                     <p class="text-lg font-semibold text-gray-800">1. Book Review: Going into Labor: Childbirth in Capitalism by Anna Fielder</p>
-                    <!-- Publication text color set back to INTENSE RED -->
                     <p class="text-sm text-[var(--color-primary)]">Martinez Ochoa, A. <span class="font-medium italic">Gender and Society.</span> (October 2025)</p>
                 </div>
 
-                <!-- Publication 2 (2025) - UPDATED LINK HERE -->
-                <a href="https://journals.sagepub.com/doi/10.1177/08912432251382897" target="_blank" class="publication-link p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-100">
+                
+
+<a href="https://journals.sagepub.com/doi/10.1177/08912432251382897" target="_blank" class="publication-link p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-100">
                     <p class="text-lg font-semibold text-gray-800">2. Perspectives on motherhood, labor, and emerging technologies</p>
-                    <!-- Publication text color set back to INTENSE RED -->
                     <p class="text-sm text-[var(--color-primary)]">Martinez Ochoa, A., Alzate, C. <span class="font-medium italic">Journal of the Motherhood Initiative.</span> (March 2025)</p>
                 </a>
 
-                <!-- Publication 3 (2021) - Renumbered to 3 -->
-                <a href="https://conference.otessa.org/index.php/conference/article/view/47" target="_blank" class="publication-link p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-100">
+                
+
+<a href="https://conference.otessa.org/index.php/conference/article/view/47" target="_blank" class="publication-link p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-100">
                     <p class="text-lg font-semibold text-gray-800">3. Uncovering the Politics Behind Adobe Stock</p>
-                    <!-- Publication text color set back to INTENSE RED -->
                     <p class="text-sm text-[var(--color-primary)]">Martinez Ochoa, A. <span class="font-medium italic">OTESSA 2021 Conference Proceedings.</span> (December 2021)</p>
                 </a>
                 
-                <!-- Publication 4 (2016) - Renumbered to 4 -->
-                <a href="https://journals.sagepub.com/doi/abs/10.1177/2278533716644873" target="_blank" class="publication-link p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-100">
+                
+
+<a href="https://journals.sagepub.com/doi/abs/10.1177/2278533716644873" target="_blank" class="publication-link p-4 bg-gray-50 rounded-lg shadow-sm border border-gray-100">
                     <p class="text-lg font-semibold text-gray-800">4. Job Opportunities for International Graduates in the Russian and German Labor Markets</p>
-                    <!-- Publication text color set back to INTENSE RED -->
                     <p class="text-sm text-[var(--color-primary)]">Martinez Ochoa, A., Schegolev, V., Lassleben, H. <span class="font-medium italic">Business Perspectives and Research.</span> (2016)</p>
                 </a>
             </div>
         </section>
         
-        <!-- 5. Conferences & Creative Work (UPDATED WITH NEW ENTRY) -->
-        <section id="conferences" class="content-section">
+        
+
+<section id="conferences" class="content-section">
             <h2 class="text-4xl font-light text-gray-800 mb-10 border-b-2 border-[var(--color-secondary-2)] inline-block pb-1 tracking-wider">
                 Conferences & Creative Work
             </h2>
             
             <h3 class="text-2xl font-semibold text-gray-900 mb-4 mt-6">Conference Presentations</h3>
             <div class="space-y-6">
-                <!-- Conference 1: Gender and Labor in the Gig Economy (September 2025) - NEW -->
-                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                
+
+<div class="p-4 bg-gray-50 rounded-lg shadow-sm">
                     <p class="text-lg font-semibold text-gray-800">Gender and Labor in the Gig Economy</p>
                     <p class="text-sm text-gray-700">Presented at the Panel "(Un/Re) Making Gendered Platforms," at the <span class="text-[var(--color-primary)] font-medium">Society for Social Studies of Science (4S) Conference, Seattle.</span></p>
                     <p class="text-xs text-gray-500">September 2025</p>
                 </div>
-                <!-- Conference 2: Technosolutionsims and the Care Crisis (June 2025) -->
-                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                
+
+<div class="p-4 bg-gray-50 rounded-lg shadow-sm">
                     <p class="text-lg font-semibold text-gray-800">Technosolutionsims and the Care Crisis</p>
                     <p class="text-sm text-gray-700">Panel: Caring for Care: Robotics and Care, at the <span class="text-[var(--color-primary)] font-medium">Science and Technology (STS) Italia.</span></p>
                     <p class="text-xs text-gray-500">June 2025</p>
                 </div>
-                <!-- Conference 3: Mother User-Mother Work (December 2024) -->
-                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                
+
+<div class="p-4 bg-gray-50 rounded-lg shadow-sm">
                     <p class="text-lg font-semibold text-gray-800">Mother User-Mother Work (Panel organizer)</p>
                     <p class="text-sm text-gray-700">End-of-year event at the <span class="text-[var(--color-primary)] font-medium">LaborTech Research Network.</span></p>
                     <p class="text-xs text-gray-500">December 2024</p>
                 </div>
-                <!-- Conference 4: Postpartum Pressures (October 2024) -->
-                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                
+
+<div class="p-4 bg-gray-50 rounded-lg shadow-sm">
                     <p class="text-lg font-semibold text-gray-800">Postpartum Pressures: How FemTech and Silicon Valley Are Shaping Contemporary Motherhood</p>
                     <p class="text-sm text-gray-700">Virtual talk at the <span class="text-[var(--color-primary)] font-medium">LaborTech Speaker Series.</span></p>
                     <p class="text-xs text-gray-500">October 2024</p>
                 </div>
-                <!-- Conference 5: Nurture: Online Digital Platforms of Milk Sharing (June 2024) -->
-                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                
+
+<div class="p-4 bg-gray-50 rounded-lg shadow-sm">
                     <p class="text-lg font-semibold text-gray-800">Nurture: Online Digital Platforms of Milk Sharing</p>
                     <p class="text-sm text-gray-700">Paper presentation at the <span class="text-[var(--color-primary)] font-medium">Datafied Family Conference, University of Surrey, UK.</span> Panel: Fetus, Infant, Child.</p>
                     <p class="text-xs text-gray-500">June 2024</p>
                 </div>
-                <!-- Conference 6: Corporate Troubleshooting of Motherhood (November 2023) - Added in previous step -->
-                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                
+
+<div class="p-4 bg-gray-50 rounded-lg shadow-sm">
                     <p class="text-lg font-semibold text-gray-800">Corporate Troubleshooting of Motherhood in the Digital Age: Exploring Virtual Clinics' Role in Shaping Contemporary Motherhood</p>
                     <p class="text-sm text-gray-700">Paper presentation at the <span class="text-[var(--color-primary)] font-medium">Society for Social Studies of Science (4S) Conference, Honolulu, Hawaii.</span></p>
                     <p class="text-xs text-gray-500">November 2023</p>
                 </div>
-                <!-- Conference 7: Mobilizations of the Female Body (February 2023) - The entry from the image you provided -->
-                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                
+
+<div class="p-4 bg-gray-50 rounded-lg shadow-sm">
                     <p class="text-lg font-semibold text-gray-800">Mobilizations of the Female Body in Online Communities of Breastmilk Exchange: Differences and Tensions</p>
                     <p class="text-sm text-gray-700">Panel discussion: (A) Moral Policing: Social Gaze Towards Female Bodies at the <span class="text-[var(--color-primary)] font-medium">Research, Art, Writing (RAW) Conference, UTD.</span></p>
                     <p class="text-xs text-gray-500">February 2023</p>
                 </div>
-                <!-- Conference 8: Uncovering the Politics Behind Adobe Stock (December 2021) -->
-                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                
+
+<div class="p-4 bg-gray-50 rounded-lg shadow-sm">
                     <p class="text-lg font-semibold text-gray-800">Uncovering the Politics Behind Adobe Stock</p>
                     <p class="text-sm text-gray-700">Paper presentation at the <span class="text-[var(--color-primary)] font-medium">OTESSA Conference, University of Alberta, Canada.</span></p>
                     <p class="text-xs text-gray-500">December 2021</p>
@@ -335,69 +362,203 @@
             </div>
 
             <h3 class="text-2xl font-semibold text-gray-900 mb-4 mt-8">Art Exhibitions</h3>
-            <!-- New descriptive text added here -->
             <p class="text-base text-gray-700 mb-4">
                 Art exhibitions developed in collaboration with the Critical Anatomies Lab, led by Prof. Catalina Alzate at the School of Art and Design, University of Illinois at Urbana-Champaign.
             </p>
             <div class="space-y-6">
-                 <!-- Art Exhibition 1: Techno-Motherhood -->
-                <!-- Converted to an anchor tag with link and block styling -->
-                <a href="https://www.criticalanatomies.com/interventions" target="_blank" class="block p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-lg transition duration-300">
+                 
+
+<a href="https://www.criticalanatomies.com/interventions" target="_blank" class="block p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-lg transition duration-300">
                     <p class="text-lg font-semibold text-gray-800">Techno-Motherhood (A Poster Series exhibition with Catalina Alzate)</p>
                     <p class="text-sm text-gray-700">Exhibited at the <span class="text-[var(--color-primary)] font-medium">Perspective Gallery at Virginia Tech.</span></p>
                     <p class="text-xs text-gray-500">March 2025</p>
                 </a>
-                <!-- Art Exhibition 2: Motherhood and the Gig Economy -->
-                <!-- Converted to an anchor tag with link and block styling -->
-                <a href="https://www.criticalanatomies.com/interventions" target="_blank" class="block p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-lg transition duration-300">
+                
+
+<a href="https://www.criticalanatomies.com/interventions" target="_blank" class="block p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-lg transition duration-300">
                     <p class="text-lg font-semibold text-gray-800">Motherhood and the Gig Economy (A Poster series exhibition with Catalina Alzate)</p>
                     <p class="text-sm text-gray-700">Exhibited at the <span class="text-[var(--color-primary)] font-medium">20th Anniversary Academic & Arts Conference, Museum of Motherhood.</span></p>
                     <p class="text-xs text-gray-500">March 2025</p>
                 </a>
             </div>
         </section>
+        
+        
 
-        <!-- 6. Awards and Honors (UPDATED WITH FULL DETAIL) -->
-        <section id="awards" class="content-section">
+<section id="portfolio" class="content-section">
+            <h2 class="text-4xl font-light text-gray-800 mb-10 border-b-2 border-[var(--color-secondary-2)] inline-block pb-1 tracking-wider">
+                Digital Portfolio & Projects
+            </h2>
+            
+            <p class="text-lg text-gray-700 mb-8">
+                A selection of digital media, design, and research-driven projects that demonstrate technical and creative application of critical theory.
+            </p>
+
+            
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                
+                
+
+<a href="#" onclick="showProjectDetail('motherhood-labor'); return false;" class="portfolio-card">
+                    
+
+<img src="https://static.wixstatic.com/media/5721b2_6ded9d97b8314b29bcbfd1906b02f944~mv2.jpg/v1/fill/w_654,h_436,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Posters%202%20(2).jpg" 
+                        alt="Visual essay poster series on motherhood and labor" 
+                        class="w-full h-40 object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x160/C0392B/FFFFFF?text=Visual+Essay+Image+Error';">
+                    <div class="p-4">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-1">Motherhood, Labor and Digital Technologies</h4>
+                        <p class="text-sm text-[var(--color-secondary-1)] font-medium">Visual Essays</p>
+                        <p class="text-sm text-gray-600 mt-2">A critique of the entanglement of motherhood and work, developed in collaboration with Catalina Alzate. Analyzes digital technologies like smart screens and apps that mediate mothering.</p>
+                    </div>
+                </a>
+
+                
+
+<a href="#" onclick="showProjectDetail('mothers-gig-economy'); return false;" class="portfolio-card">
+                    
+
+<img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,fit=crop/AE0r2DVar9u9ebkX/compild-mnl4lBOW1jf8G08L.jpg" 
+                        alt="Visual essay poster series on mothers and the gig economy" 
+                        class="w-full h-40 object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x160/C0392B/FFFFFF?text=Gig+Economy+Image+Error';">
+                    <div class="p-4">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-1">Mothers and the Gig Economy</h4>
+                        <p class="text-sm text-[var(--color-secondary-1)] font-medium">Posters</p>
+                        <p class="text-sm text-gray-600 mt-2">Commentary on the “Uberization of motherhood” through case studies of Gig Economy platforms that position mothers as human capital.</p>
+                    </div>
+                </a>
+                
+            </div>
+        </section>
+        
+        
+
+<section id="student-portfolio" class="content-section">
+            <h2 class="text-4xl font-light text-gray-800 mb-10 border-b-2 border-[var(--color-secondary-2)] inline-block pb-1 tracking-wider">
+                Digital Portfolio of Students' Work
+            </h2>
+            
+            <p class="text-lg text-gray-700 mb-8">
+                Highlighting exemplary digital, critical design, and analytical projects from courses I have taught, demonstrating student application of critical media concepts and technical proficiency.
+            </p>
+
+            
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                
+
+<a href="#" onclick="showProjectDetail('student-speculative-design'); return false;" class="portfolio-card bg-gray-50 border-gray-200">
+                    
+
+<div class="grid grid-cols-3 gap-0.5 w-full h-40 overflow-hidden bg-gray-300">
+                        <img src="https://static.wixstatic.com/media/5721b2_b73e566ee2bf458586a632d16e95c530~mv2.png/v1/fill/w_862,h_1096,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202024-11-16%20at%2012_03_06%20PM.png" 
+                             alt="Student Speculative design visual 1" 
+                             class="w-full h-full object-cover"
+                             onerror="this.onerror=null; this.src='https://placehold.co/200x400/3498DB/FFFFFF?text=Image+Load+Error';">
+                        
+
+<img src="https://static.wixstatic.com/media/5721b2_f3022eea04c740148c6d8df3eee61d1e~mv2.png/v1/fill/w_878,h_584,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202024-11-16%20at%2012_02_51%20PM.png" 
+                             alt="Student Dear AI Letter" 
+                             class="w-full h-full object-cover"
+                             onerror="this.onerror=null; this.src='https://placehold.co/200x400/3498DB/FFFFFF?text=Dear+AI+Letter+Image+Error';">
+                        <img src="https://static.wixstatic.com/media/5721b2_ecee3592d51e4916a925b20cdc9fd567~mv2.png" 
+                             alt="Student Tarot Card of Tech" 
+                             class="w-full h-full object-cover"
+                             onerror="this.onerror=null; this.src='https://placehold.co/200x400/3498DB/FFFFFF?text=Image+Load+Error';">
+                    </div>
+                    
+
+<div class="p-4">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-1">Technoculture: Speculative Design, Dear AI Letters & Tarot Cards of Tech</h4>
+                        <p class="text-sm text-gray-600">A curated collection of student projects blending design fiction (to critique algorithmic bias), reflective letters to AI (to explore ethical visions for the technology), and critical analysis using the Tarot Cards of Tech (to prompt reflection on technological impact).</p>
+                        <p class="text-xs text-[var(--color-secondary-2)] mt-2 font-medium">Course: Technoculture & Digital Art (2024)</p>
+                    </div>
+                </a>
+
+                
+
+<a href="#" onclick="showProjectDetail('student-social-practice'); return false;" class="portfolio-card bg-gray-50 border-gray-200">
+                    
+
+<img src="https://static.wixstatic.com/media/5721b2_22baf80dd72b4d6cbdb6a09f778b62e3~mv2.png" 
+                         alt="Student digital art project: Twine non-linear story frontend" 
+                         class="w-full h-40 object-cover"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/C0392B/FFFFFF?text=Image+Error';">
+                    <div class="p-4">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-1">Digital Art & Social Practice: Instagram Campaign and Community Stories (Twine)</h4>
+                        <p class="text-sm text-gray-600">Features the "Instagram Campaign" and the non-linear "Community Stories" project (using Twine), demonstrating critical media art and narrative design for social commentary.</p>
+                        <p class="text-xs text-[var(--color-secondary-2)] mt-2 font-medium">Course: Digital Art and Social Practice (2022-2024)</p>
+                    </div>
+                </a>
+                
+                
+
+<a href="#" onclick="showProjectDetail('transnational-film-video'); return false;" class="portfolio-card bg-gray-50 border-gray-200">
+                    <img src="https://placehold.co/600x400/3498DB/FFFFFF?text=Transnational+Video+Essays" 
+                         alt="Student video essay still" 
+                         class="w-full h-40 object-cover"
+                         onerror="this.onerror=null; this.src='https://placehold.co/600x400/3498DB/FFFFFF?text=Image+Error';">
+                    <div class="p-4">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-1">Transnational Film & Video</h4>
+                        <p class="text-sm text-gray-600">Group video essays exploring global media flows, post-colonial narratives, and Deborah Shaw's categories of transnational cinema.</p>
+                        <p class="text-xs text-[var(--color-secondary-2)] mt-2 font-medium">Course: Transnational Film (Fall 2024)</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+
+        
+
+<section id="awards" class="content-section">
             <h2 class="text-4xl font-light text-gray-800 mb-10 border-b-2 border-[var(--color-secondary-2)] inline-block pb-1 tracking-wider">
                 Awards and Honors
             </h2>
 
             <div class="space-y-4">
-                <!-- Award 1: Best Dissertation -->
-                <div class="border-b pb-3 mb-3">
+                
+
+<div class="border-b pb-3 mb-3">
                     <p class="text-lg font-medium text-gray-800">Best Dissertation Award</p>
                     <div class="flex justify-between items-center text-sm mt-1">
                         <p class="text-gray-600">Harry W. Bass Jr. School of Arts, Humanities, and Technology, The University of Texas at Dallas</p>
                         <p class="text-[var(--color-primary)] font-semibold">April 2025</p>
                     </div>
                 </div>
-                 <!-- Award 2: Dean of Graduate Education Dissertation Research Award -->
-                <div class="border-b pb-3 mb-3">
+                 
+
+<div class="border-b pb-3 mb-3">
                     <p class="text-lg font-medium text-gray-800">Dean of Graduate Education Dissertation Research Award</p>
                     <div class="flex justify-between items-center text-sm mt-1">
                         <p class="text-gray-600">Office of Graduate Education, The University of Texas at Dallas</p>
                         <p class="text-[var(--color-primary)] font-semibold">May 2023</p>
                     </div>
                 </div>
-                 <!-- Award 3: The Jess Hay Endowment -->
-                <div class="border-b pb-3 mb-3">
+                 
+
+<div class="border-b pb-3 mb-3">
                     <p class="text-lg font-medium text-gray-800">The Jess Hay Endowment for Chancellor's Graduate Student Research Fellowship (ATEC Nominee)</p>
                     <div class="flex justify-between items-center text-sm mt-1">
                         <p class="text-gray-600">The University of Texas at Dallas</p>
                         <p class="text-[var(--color-primary)] font-semibold">May 2021</p>
                     </div>
                 </div>
-                 <!-- Award 4: CONACYT Doctoral Fellowship -->
-                <div class="border-b pb-3 mb-3">
+                 
+
+<div class="border-b pb-3 mb-3">
                     <p class="text-lg font-medium text-gray-800">CONACYT Doctoral Fellowship</p>
                     <div class="flex justify-between items-center text-sm mt-1">
                         <p class="text-gray-600">Mexico: National Council of Science and Technology</p>
                         <p class="text-[var(--color-primary)] font-semibold">September 2020</p>
                     </div>
                 </div>
-                <!-- Award 5: Betty and Gifford Johnson Travel Award -->
-                <div class="border-b pb-3 mb-3">
+                
+
+<div class="border-b pb-3 mb-3">
                     <p class="text-lg font-medium text-gray-800">Betty and Gifford Johnson Travel Award</p>
                     <div class="flex justify-between items-center text-sm mt-1">
                         <p class="text-gray-600">Office of Graduate Education, The University of Texas at Dallas</p>
@@ -407,8 +568,9 @@
             </div>
         </section>
 
-        <!-- 7. Service, Certifications, and Development (RESTORED) -->
-        <section id="service" class="content-section">
+        
+
+<section id="service" class="content-section">
             <h2 class="text-4xl font-light text-gray-800 mb-10 border-b-2 border-[var(--color-secondary-2)] inline-block pb-1 tracking-wider">
                 Service, Certifications, and Development
             </h2>
@@ -443,14 +605,14 @@
             </div>
         </section>
 
-        <!-- 8. Research Interests (RESTORED) -->
-        <section id="interests" class="content-section">
+        
+
+<section id="interests" class="content-section">
             <h2 class="text-4xl font-light text-gray-800 mb-10 border-b-2 border-[var(--color-secondary-2)] inline-block pb-1 tracking-wider">
                 Research Interests
             </h2>
 
             <div class="flex flex-wrap gap-3">
-                <!-- Interest chips use the YELLOW accent color for icons/focus -->
                 <span class="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium transition duration-200 shadow-inner">
                     <span class="text-[var(--color-secondary-1)] font-bold mr-1">#</span> Platform Capitalism
                 </span>
@@ -471,12 +633,12 @@
                 </span>
             </div>
         </section>
+
         
-        <!-- Footer / Contact -->
-        <footer class="py-10 text-center text-sm text-gray-500 border-t border-gray-200 mt-8">
+
+<footer class="py-10 text-center text-sm text-gray-500 border-t border-gray-200 mt-8">
             <p>Connect with Angelica:</p>
             <div class="mt-2 space-x-4">
-                <!-- Links use INTENSE RED -->
                 <a href="mailto:angelica.martinez.ochoa@gmail.com" class="text-[var(--color-primary)] hover:text-[#A93226] transition">Email</a>
                 <span class="text-gray-400">|</span>
                 <a href="https://linkedin.com/in/angelica-martinez-ochoa/" target="_blank" class="text-[var(--color-primary)] hover:text-[#A93226] transition">LinkedIn</a>
@@ -488,7 +650,332 @@
             <p class="mt-4">&copy; 2025 Angelica Martinez Ochoa. All rights reserved.</p>
         </footer>
 
-    </main>
+    </div>
     
+    
+
+<section id="project-detail-view" class="hidden max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20">
+        <div class="mb-8">
+            <button onclick="showMainPage();" 
+                    class="flex items-center text-[var(--color-primary)] hover:text-[#A93226] transition duration-300 font-semibold text-lg">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Back to Portfolio
+            </button>
+        </div>
+
+        <h1 id="detail-title" class="text-5xl font-extrabold text-gray-900 leading-tight mb-4"></h1>
+        <p id="detail-type" class="text-xl font-medium text-[var(--color-secondary-1)] mb-6"></p>
+        
+        <div class="flex flex-wrap items-center space-x-4 mb-10">
+            
+
+<a id="detail-link" href="#" target="_blank" 
+                class="px-5 py-2 bg-[var(--color-secondary-2)] text-white font-bold rounded-lg hover:bg-[#2e86c1] transition duration-300 shadow-md">
+                View External Project Link
+            </a>
+            
+
+<div id="detail-audio-container" class="mt-4 sm:mt-0">
+                
+
+</div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+
+<div class="lg:col-span-1">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-3 border-b pb-2">Description</h3>
+                <div id="detail-description" class="text-lg text-gray-700 leading-relaxed space-y-4">
+                    
+
+</div>
+            </div>
+            
+            
+
+<div class="lg:col-span-2">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-3 border-b pb-2">Visual Content</h3>
+                <div id="detail-images-container" class="space-y-6">
+                    
+
+</div>
+            </div>
+        </div>
+    </section>
+
+    
+
+<script>
+        // --- 1. Project Data Store ---
+        const projects = {
+            'motherhood-labor': {
+                title: 'Motherhood, Labor and Digital Technologies',
+                type: 'Visual Essays',
+                link: 'https://www.criticalanatomies.com/interventions',
+                audioUrl: null, // No audio for this project
+                fullDescription: `
+                    <p>In this series of collage and scan-art pieces, and in collaboration with Catalina Alzate, Assistant Professor of Graphic Design at the University of Illinois Urbana-Champaign, we offer an analysis and a critique of the contemporary entanglement of motherhood and work.</p>
+                    <p>Digital technologies often reproduce the mandate that mothers need to excel both at home and at work, blurring the boundaries of domestic and professional labor. This project examines how specific "mothering technologies"—such as breast pumps, smart screens, and motherhood-related apps—enable and mediate sites of mothering, transforming the experience of social reproduction.</p>
+                    <p>The visual essays use striking imagery to deconstruct these technologies, revealing the underlying power structures and commercial interests that shape contemporary mothering practices.</p>
+                    
+                    <h4 class="text-xl font-semibold mt-6 mb-2 text-gray-800">Featured In:</h4>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li><strong>Journal Article:</strong> "Visual Essay: Perspectives on Motherhood, Labour, and Emerging Technologies" in the <em>Journal of the Motherhood Initiative for Research and Community Involvement</em> 15.1. Spring/Fall (2025).</li>
+                        <li><strong>Exhibition:</strong> Featured in the "m(othering) Exhibition" at the Perspective Gallery in Virginia Tech, Spring 2025.</li>
+                        <li><strong>Cover Art:</strong> One of the collages was selected as the cover page of the <em>Journal of the Motherhood Initiative</em> Vol. 15.</li>
+                    </ul>
+                `,
+                detailImages: [
+                    'https://static.wixstatic.com/media/5721b2_6ded9d97b8314b29bcbfd1906b02f944~mv2.jpg/v1/fill/w_654,h_436,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Posters%202%20(2).jpg',
+                    'https://static.wixstatic.com/media/5721b2_7d4586900a6345adb4b883ae5f2eb181~mv2.jpg/v1/fill/w_654,h_436,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Copy%20of%20Posters%201.jpg', 
+                    'https://static.wixstatic.com/media/5721b2_4387a8a1cfa74c998cfe079928591be2~mv2.jpg/v1/crop/x_0,y_3,w_2000,h_2793/fill/w_698,h_974,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Poster%20Piece%202%20(1).jpg', 
+                    'https://static.wixstatic.com/media/5721b2_fc36ce018bb54cea970e18603b9c6e7d~mv2.jpg/v1/fill/w_698,h_974,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Poster%20Piece%201%20(1).jpg'
+                ]
+            },
+            'mothers-gig-economy': {
+                title: 'Mothers and the Gig Economy',
+                type: 'Posters',
+                link: '#conferences', // Placeholder link. User can provide a specific URL later.
+                audioUrl: null, // No audio for this project
+                fullDescription: `
+                    <p>In this series of collages, Catalina Alzate and I offer a commentary on the “Uberization of motherhood” through case studies of Gig Economy platforms that position mothers as another form of human capital. We study how reproductive labor is commercialized through digital platforms, while the ecosystem perpetuates traditional gender and racial divisions of labor.</p>
+                    
+                    <h4 class="text-xl font-semibold mt-6 mb-2 text-gray-800">Featured In:</h4>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li><strong>Presentation:</strong> “Mother User - Mother Worker: The intersection of Motherhood, Labor, Design and Digital Platforms” LaborTech Research Network End of Year Showcase.</li>
+                        <li><strong>Conference Presentation:</strong> “Mothers and the Gig Economy” The Museum of Motherhood’s Academic & Arts Conference 2025.</li>
+                    </ul>
+                `,
+                detailImages: [
+                    'https://assets.zyrosite.com/cdn-cgi/image/format=auto,fit=crop/AE0r2DVar9u9ebkX/compild-mnl4lBOW1jf8G08L.jpg', 
+                ]
+            },
+            'student-speculative-design': {
+                title: 'Technoculture: Speculative Design, Dear AI Letters & Tarot Cards of Tech',
+                type: 'Student Portfolio Highlights',
+                link: '#', // No external link for now
+                audioUrl: 'https://static.wixstatic.com/mp3/5721b2_6f3f2f97720741619c12fedfcfee77ef.m4a',
+                fullDescription: `
+                    <p>This curated collection showcases work from the <strong>"Technoculture"</strong> course. The projects blend critical design fiction with deeply personal reflections on the role of artificial intelligence and analytical engagement with technology's broader societal impacts.</p>
+                    
+                    <h4 class="text-xl font-semibold mt-6 mb-2 text-gray-800">Speculative Design:</h4>
+                    <p>This component tasked students with creating fictional artifacts and interfaces to critique issues like algorithmic bias and platform surveillance, forcing them to use practical design skills to imagine future outcomes.</p>
+
+                    <h4 class="text-xl font-semibold mt-6 mb-2 text-gray-800">"Dear AI" Letters:</h4>
+                    <p>This challenge prompted students to write and record letters to a future AI system, expressing their hopes, fears, and ethical concerns regarding its role in society, creativity, and labor. The letters emphasize the human, emotional, and social dimensions of AI adoption.</p>
+                    <p class="font-bold text-[var(--color-primary)] mt-4">The audio letter available above represents an exemplary student submission, offering a profound and reflective perspective on the future partnership between humans and AI.</p>
+                    
+                    <h4 class="text-xl font-semibold mt-6 mb-2 text-gray-800">Tarot Cards of Tech:</h4>
+                    <p>For this assignment, students engaged with the <a href="https://tarotcardsoftech.com/" target="_blank" class="text-[var(--color-secondary-2)] hover:underline">Tarot Cards of Tech</a>, a tool designed to inspire conversations and reflections around the broader impact of technology and the products we design. Through this exercise, students critically analyzed potential outcomes of technology, from unintended consequences to opportunities for positive change, fostering a deeper ethical understanding of technological development.</p>
+
+                    <h4 class="text-xl font-semibold mt-6 mb-2 text-gray-800">Key Themes Explored:</h4>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li><strong>Design Fiction:</strong> Creating critical design artifacts and prototypes.</li>
+                        <li><strong>Ethical Futures:</strong> Questions of bias, ownership, and labor displacement.</li>
+                        <li><strong>Critical Reflection:</strong> Using design tools to analyze societal impacts of technology.</li>
+                    </ul>
+                `,
+                detailImages: [
+                    'https://static.wixstatic.com/media/5721b2_ecee3592d51e4916a925b20cdc9fd567~mv2.png', // Tarot Card 1
+                    'https://static.wixstatic.com/media/5721b2_c7a9e71eb8ce4057b1f7becc4c99e6d8~mv2.png', // Tarot Card 2
+                    'https://static.wixstatic.com/media/5721b2_fc5d44c324f74cd5b6073184fe38f7f7~mv2.png', // Tarot Card 3
+                    'httpsD://static.wixstatic.com/media/5721b2_b73e566ee2bf458586a632d16e95c530~mv2.png/v1/fill/w_862,h_1096,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202024-11-16%20at%2012_03_06%20PM.png',
+                    'https://static.wixstatic.com/media/5721b2_f3022eea04c740148c6d8df3eee61d1e~mv2.png',
+                    'https://static.wixstatic.com/media/5721b2_9bdc4b9493864ecf9984e0a273edb7d8~mv2.png',
+                    'https://static.wixstatic.com/media/5721b2_e4b8eeed8063438d8de23758d520ddfb~mv2.png', 
+                ]
+            },
+            'student-social-practice': {
+                title: 'Digital Art & Social Practice',
+                type: 'Student Portfolio Highlights',
+                link: '#', 
+                audioUrl: null,
+                fullDescription: `
+                    <p>A showcase of student-led projects from the <strong>"Digital Art and Social Practice"</strong> course, focusing on interactive media, web-based art, and critical communication to address contemporary social and political issues. This course emphasizes using art and design as a form of critical intervention.</p>
+                    
+                    <h4 class="text-xl font-semibold mt-6 mb-2 text-gray-800">Project 1: Instagram Communication Campaign</h4>
+                    <p>This project challenged students to create an Instagram feed that responds to a current event or issue. The goal was to communicate complex information in an engaging and accessible visual style.</p>
+
+                    <h5 class="text-lg font-medium mt-4 mb-2 text-gray-700">Student Rationale: Hand-Drawn Design</h5>
+                    <blockquote class="border-l-4 border-[var(--color-primary)] pl-4 italic text-gray-600">
+                        "My process when creating the images was to read various articles and watch videos pertaining to the issues. I wanted to challenge myself, and not simply just post or take pictures. Therefore, I decided to take the graphic design approach and draw my own images to post. I used images I found online to draw my images from reference. The reason I think posting data and images hand drawn/designed helps is because people will feel more intrigued to look at the images instead of being intimidated by images that may look like from a news outlet. Some people prefer to not look at news stuff on social media so I think the drawing approach prevents that."
+                    </blockquote>
+                    
+                    <h4 class="text-xl font-semibold mt-6 mb-2 text-gray-800 border-t pt-4">Project 2: Community Stories, Relationships, and Entanglements (Twine)</h4>
+                    <p>This project challenged students to select a socially relevant event or issue within their community and translate its complexities into a non-linear digital story using <strong>Twine</strong>. The objective was to map out the interconnected, non-linear nature of complex community events.</p>
+
+                    <h5 class="text-lg font-medium mt-4 mb-2 text-gray-700">Student Rationale: Metaphorical Framing (Murder Mystery)</h5>
+                    <blockquote class="border-l-4 border-[var(--color-primary)] pl-4 italic text-gray-600">
+                        "My project calls for directive participation because it asks the audience to complete simple tasks, clicking through the story, and putting together clues to further the plot. In high school, my best friend sexually assaulted someone. While I don’t mention SA in my story because I don’t personally have the capacity to discuss such a topic responsibly, the metaphor of a murder mystery suits my perspective of the situation quite well. When I went into this project, I wanted to tackle the social situation surrounding my experience."
+                    </blockquote>
+
+                    <h4 class="text-xl font-semibold mt-6 mb-2 text-gray-800">Key Themes Explored:</h4>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li><strong>Non-Linear Narrative:</strong> Using Twine to map out social complexity.</li>
+                        <li><strong>Metaphorical Framing:</strong> Translating sensitive personal issues into narrative genres (e.g., mystery).</li>
+                        <li><strong>Visual Communication:</strong> Using unique artistic styles (hand-drawn graphics) to soften complex data and political topics for social media audiences.</li>
+                    </ul>
+                `,
+                detailImages: [
+                    // Instagram Images (4)
+                    'https://static.wixstatic.com/media/5721b2_ab6640ebe34346d882e06a9b82c0c200~mv2.png',
+                    'https://static.wixstatic.com/media/5721b2_c75c8a4732bc4532bd3b6a8e1135c146~mv2.png',
+                    'https://static.wixstatic.com/media/5721b2_fe1c42f4c8c448899308e440909dc3ab~mv2.png',
+                    'https://static.wixstatic.com/media/5721b2_cb97e80882924bfd8f863cc3e3d7224e~mv2.png',
+                    // Twine/Community Stories Images (3)
+                    'https://static.wixstatic.com/media/5721b2_22baf80dd72b4d6cbdb6a09f778b62e3~mv2.png', // Twine Frontend
+                    'https://static.wixstatic.com/media/5721b2_304696d4eaf34824b5f2d201b1bd8631~mv2.png', // Twine Backend 1
+                    'https://static.wixstatic.com/media/5721b2_23c63d2faa0c4768bb6c60428d8ef346~mv2.png', // Twine Backend 2
+                ]
+            },
+            // NEW PROJECT ADDED HERE
+            'transnational-film-video': {
+                title: 'Transnational Film & Video',
+                type: 'Student Portfolio Highlights',
+                link: 'https://angelica-martinez.wixsite.com/my-site-8',
+                audioUrl: null,
+                fullDescription: `
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3 border-b pb-2">Course Overview</h3>
+                    <p>This course introduces students to films and videos as forms of modern human cultural expression and understanding. A wide range of films and videos about humans and their diverse experiences around the globe is explored. Themes include <strong>love, loss, memory, migration, history, nation, and globalization</strong>.</p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3 border-b pb-2 mt-6">Main Project: Transnational Video Essay (Group)</h3>
+                    <p>The main project for this class is a group video essay that explores the <strong>transnational aspects</strong> of one or more of the films studied in class. Students are required to develop a comprehensive project package including the video, a written script, and a storyboard.</p>
+
+                    <h4 class="text-xl font-semibold mt-4 mb-2 text-gray-700">Video Essay Requirements:</h4>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li><strong>Basic Film Information:</strong> Present director, producing studios, year of release, and genre (including other relevant info).</li>
+                        <li><strong>Theoretical Positioning:</strong> Position the movie in one or more of the <strong>15 categories of transnational movies by Deborah Shaw</strong> and explain why.</li>
+                        <li><strong>Central Argument:</strong> Make one core argument about the film(s) and sustain it with evidence.</li>
+                        <li><strong>Scene Analysis:</strong> Demonstrate the argument by analyzing <strong>two or more specific scenes</strong> from the film(s).</li>
+                    </ul>
+                    
+                    <p class="mt-4">Students are also required to produce a <strong>written essay</strong> that might be used as the script for the video essay, and a comprehensive <strong>storyboard</strong>.</p>
+                `,
+                detailImages: [
+                    'https://static.wixstatic.com/media/5721b2_46da8c31f0914929b4ebb25d2ef5aa58~mv2.png', // Storyboard Example
+                    'https://placehold.co/800x500/3498DB/FFFFFF?text=Example+Video+Essay+Still+1',
+                    'https://placehold.co/800x500/3498DB/FFFFFF?text=Example+Video+Essay+Still+2',
+                ]
+            }
+        };
+
+        // --- 2. Routing Functions ---
+
+        /**
+         * Switches the view to the main portfolio page and scrolls to the top.
+         */
+        function showMainPage() {
+            document.getElementById('main-content').classList.remove('hidden');
+            document.getElementById('project-detail-view').classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            // Optionally update the URL hash
+            history.pushState(null, '', window.location.pathname + window.location.search);
+        }
+
+        /**
+         * Switches the view to the project detail page and loads the content.
+         * @param {string} projectId - The ID of the project to display.
+         */
+        function showProjectDetail(projectId) {
+            const project = projects[projectId];
+
+            if (!project) {
+                console.error('Project not found:', projectId);
+                return;
+            }
+
+            // Update Header/Metadata
+            document.getElementById('detail-title').textContent = project.title;
+            document.getElementById('detail-type').textContent = project.type;
+            
+            // Update Text Description
+            document.getElementById('detail-description').innerHTML = project.fullDescription;
+            
+            // Update External Link
+            const linkElement = document.getElementById('detail-link');
+            // If the link is an internal anchor, the button links to that section on the main page
+            if (project.link === '#') {
+                 linkElement.style.display = 'none'; // Hide the button if no link is provided
+            } else if (project.link.startsWith('#')) {
+                 linkElement.style.display = 'inline-flex';
+                 linkElement.href = '#portfolio'; // Go back to portfolio section, not a specific conference 
+                 linkElement.textContent = `See Related Conference Presentation (See Conferences Section)`;
+                 linkElement.onclick = function() { showMainPage(); setTimeout(() => document.querySelector(project.link)?.scrollIntoView({ behavior: 'smooth' }), 100); return false; };
+
+            } else {
+                 linkElement.style.display = 'inline-flex';
+                 linkElement.href = project.link;
+                 linkElement.textContent = `View Student Projects on External Site`;
+                 linkElement.onclick = null; // Revert to default link behavior
+            }
+            
+            // --- Audio Player Logic ---
+            const audioContainer = document.getElementById('detail-audio-container');
+            audioContainer.innerHTML = ''; // Clear previous audio
+            
+            if (project.audioUrl) {
+                const audioElement = document.createElement('audio');
+                audioElement.controls = true;
+                audioElement.src = project.audioUrl;
+                audioElement.className = 'w-full md:w-96 p-2 rounded-lg bg-gray-100 border border-gray-300';
+                
+                // Optional: Add a label for better context
+                const audioLabel = document.createElement('p');
+                audioLabel.textContent = 'Listen to Student Project Audio:';
+                audioLabel.className = 'text-sm font-semibold text-gray-700 mb-1';
+                
+                audioContainer.appendChild(audioLabel);
+                audioContainer.appendChild(audioElement);
+            }
+
+            // Update Images
+            const imagesContainer = document.getElementById('detail-images-container');
+            imagesContainer.innerHTML = ''; // Clear previous images
+
+            project.detailImages.forEach(imageUrl => {
+                const imgElement = document.createElement('img');
+                imgElement.src = imageUrl;
+                imgElement.alt = `Image from ${project.title}`;
+                imgElement.className = 'w-full h-auto object-cover rounded-lg shadow-xl';
+                imgElement.onerror = function() { this.src='https://placehold.co/800x500/F39C12/FFFFFF?text=Image+Load+Error'; };
+                imagesContainer.appendChild(imgElement);
+            });
+
+
+            // Switch Views and Scroll
+            document.getElementById('main-content').classList.add('hidden');
+            document.getElementById('project-detail-view').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Optionally update URL hash for back/forward support (simple hash change)
+            history.pushState(null, '', `#project/${projectId}`);
+        }
+
+        // --- 3. Initial Load Handling (Optional: for deep linking/browser back button) ---
+        window.addEventListener('popstate', (event) => {
+            const hash = window.location.hash;
+            if (hash.startsWith('#project/')) {
+                const projectId = hash.substring('#project/'.length);
+                if (projects[projectId]) {
+                    showProjectDetail(projectId);
+                } else {
+                    showMainPage();
+                }
+            } else {
+                showMainPage();
+            }
+        });
+
+        // Check hash on load
+        window.onload = function() {
+            if (window.location.hash.startsWith('#project/')) {
+                const projectId = window.location.hash.substring('#project/'.length);
+                if (projects[projectId]) {
+                    showProjectDetail(projectId);
+                }
+            }
+        }
+    </script>
 </body>
 </html>
